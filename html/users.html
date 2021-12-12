@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      .flex{
+      .flex {
         display: flex;
         align-items: center;
         vertical-align: center;
-
       }
       .navbar {
         list-style-type: none;
@@ -36,8 +35,8 @@
       .users {
         list-style: none;
       }
-      li{
-          font-size: 20px;
+      li {
+        font-size: 20px;
       }
       .image {
         width: 30px;
@@ -49,17 +48,17 @@
   </head>
   <body>
     <ul class="navbar flex">
-      <li><a href="http://192.168.1.6:2500/users">Users</a></li>
-      <li><a href="http://192.168.1.6:2500/posts">Posts</a></li>
+      <li><a href="/users">Users</a></li>
+      <li><a href="/posts">Posts</a></li>
 
-      <li><a href="http://192.168.1.6:2500/profile">
-        <a href="http://192.168.1.6:2500/profile">
+      <li>
+        <a href="/profile">
           <img
             src="https://cdn2.vectorstock.com/i/1000x1000/20/76/man-avatar-profile-vector-21372076.jpg"
             alt=""
             class="image"
         /></a>
-      </a></li>
+      </li>
     </ul>
     <ul class="users"></ul>
   </body>

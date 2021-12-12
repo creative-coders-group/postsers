@@ -58,11 +58,11 @@
   </head>
   <body>
     <ul class="flex navbar">
-      <li><a href="http://192.168.1.6:2500/users">Users</a></li>
-      <li><a href="http://192.168.1.6:2500/posts">Posts</a></li>
+      <li><a href="/users">Users</a></li>
+      <li><a href="/posts">Posts</a></li>
 
       <li>
-        <a href="http://192.168.1.6:2500/profile">
+        <a href="/profile">
           <img
             src="https://cdn2.vectorstock.com/i/1000x1000/20/76/man-avatar-profile-vector-21372076.jpg"
             alt=""
@@ -74,7 +74,7 @@
   <script>
     let idid = window.localStorage.getItem("loginid");
     if (!idid) {
-      window.location.assign("http://192.168.1.6:2500/login");
+      window.location.assign("/login");
     }
   </script>
 </html>

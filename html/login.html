@@ -44,11 +44,7 @@
         </button>
       </div>
     </form>
-    <!-- <div class="wrapper">
-      <input type="text" id="name" required />
-      <input type="password" id="psswrd" class="" required />
-      <button id="btn">Log In</button>
-    </div> -->
+
   </body>
   <script>
     let nm = document.querySelector("#name");
@@ -72,7 +68,7 @@
         console.log(rs);
 
         window.localStorage.setItem("loginid", rs);
-        window.location.assign("http://192.168.1.6:2500");
+        window.location.assign("/");
       } else {
         alert("Invalid username or password");
       }

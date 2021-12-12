@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .flex {
+        display: flex;
+        align-items: center;
+        vertical-align: center;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+        display: flex;
+        flex-direction: row;
+        gap: 300px;
+      }
+
+      li a {
+        font-size: 20px;
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      /* Change the link color on hover */
+      li a:hover {
+        background-color: #555;
+        color: white;
+      }
+      .image {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      .navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+        display: flex;
+        flex-direction: row;
+        gap: 300px;
+      }
+      .navbar > li > a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="flex navbar">
+      <li><a href="http://192.168.1.6:2500/users">Users</a></li>
+      <li><a href="http://192.168.1.6:2500/posts">Posts</a></li>
+
+      <li>
+        <a href="http://192.168.1.6:2500/profile">
+          <img
+            src="https://cdn2.vectorstock.com/i/1000x1000/20/76/man-avatar-profile-vector-21372076.jpg"
+            alt=""
+            class="image"
+        /></a>
+      </li>
+    </ul>
+  </body>
+  <script>
+    let idid = window.localStorage.getItem("loginid");
+    if (!idid) {
+      window.location.assign("http://192.168.1.6:2500/login");
+    }
+  </script>
+</html>

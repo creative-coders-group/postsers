@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .flex{
+        display: flex;
+        align-items: center;
+        vertical-align: center;
+
+      }
+      .navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+        display: flex;
+        flex-direction: row;
+        gap: 300px;
+      }
+
+      .navbar > li > a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      /* Change the link color on hover */
+      .navbar > li > a:hover {
+        background-color: #555;
+        color: white;
+      }
+      .users {
+        list-style: none;
+      }
+      li{
+          font-size: 20px;
+      }
+      .image {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="navbar flex">
+      <li><a href="http://192.168.1.6:2500/users">Users</a></li>
+      <li><a href="http://192.168.1.6:2500/posts">Posts</a></li>
+
+      <li><a href="http://192.168.1.6:2500/profile">
+        <a href="http://192.168.1.6:2500/profile">
+          <img
+            src="https://cdn2.vectorstock.com/i/1000x1000/20/76/man-avatar-profile-vector-21372076.jpg"
+            alt=""
+            class="image"
+        /></a>
+      </a></li>
+    </ul>
+    <ul class="users"></ul>
+  </body>
+  <script>
+    async function getUsers() {
+      let url = "/user";
+      try {
+        let res = await fetch(url);
+        return await res.json();
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    async function renderer() {
+      let users = document.querySelector(".users");
+      users.innerHTML = null;
+      let datata = await getUsers();
+      for (const e of datata) {
+        let li = document.createElement("li");
+        let a = document.createElement("a");
+        a.href = "/users/" + e.id;
+        a.innerHTML = e.name;
+        a.addEventListener("click", () => {
+          window.localStorage.setItem("posterid", e.id);
+        });
+        li.append(a);
+        users.append(li);
+      }
+    }
+    renderer();
+  </script>
+</html>

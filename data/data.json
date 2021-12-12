@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "name": "Asliddin",
+        "password": "lola",
+        "posts": [
+            {
+                "title": "Bears",
+                "textContent": "Bears are mammal and they live with Russians)))",
+                "date": "11/12/2021/09/37/32"
+            },
+            {
+                "title": "Eagles",
+                "textContent": "Eagles are birds and they are great fighters)))",
+                "date": "11/12/2021/09/40/32"
+            },
+            {
+                "title": "Java development",
+                "textContent": "Using this programming language you can create web applications, desktop apps...",
+                "date": "11/11/2021/20/14/47"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Abdulmalik",
+        "password": "kuku",
+        "posts": [
+            {
+                "title": "Men",
+                "textContent": "Men are creatures that are able to think and exchange informinformation",
+                "date": "12/12/2020/11/23/32"
+            },
+            {
+                "title": "Computers",
+                "textContent": "Computers are highly important gadgets that can do a lot of functions.",
+                "date": "11/11/2021/18/35/26"
+            },
+            {
+                "title": "king",
+                "textContent": "king is someone in the rule of a country or someone who is best at something.",
+                "date": "11/11/2021/18/58/12"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Jonibek",
+        "password": "9900",
+        "posts": [
+            {
+                "title": "words",
+                "textContent": "words are a joint group of letters that is used to describe everything.",
+                "date": "11/11/2021/18/37/38"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Abdusattor",
+        "password": "1221",
+        "posts": []
+    }
+]

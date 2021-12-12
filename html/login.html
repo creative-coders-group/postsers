@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .row {
+        margin-left: 25% !important;
+      }
+    </style>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Log In</title>
+  </head>
+  <body>
+    <form class="row g-3 mt-3 ml-auto">
+      <div class="col-auto">
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Name"
+          required
+        />
+      </div>
+      <div class="col-auto">
+        <input
+          type="password"
+          class="form-control"
+          id="psswrd"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-outline-primary mb-3" id="btn">
+          Log In
+        </button>
+      </div>
+    </form>
+    <!-- <div class="wrapper">
+      <input type="text" id="name" required />
+      <input type="password" id="psswrd" class="" required />
+      <button id="btn">Log In</button>
+    </div> -->
+  </body>
+  <script>
+    let nm = document.querySelector("#name");
+    let psswrd = document.querySelector("#psswrd");
+    let btn = document.querySelector("#btn");
+
+    btn.addEventListener("click", async () => {
+      if (nm.value && psswrd.value) {
+        let response = await fetch("/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: nm.value,
+            password: psswrd.value,
+          }),
+        });
+        let rs = await response.json();
+        console.log("hello");
+        console.log(rs);
+
+        window.localStorage.setItem("loginid", rs);
+        window.location.assign("http://192.168.1.6:2500");
+      } else {
+        alert("Invalid username or password");
+      }
+    });
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"
+  ></script>
+</html>

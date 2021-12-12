@@ -40,6 +40,21 @@
                 "title": "king",
                 "textContent": "king is someone in the rule of a country or someone who is best at something.",
                 "date": "11/11/2021/18/58/12"
+            },
+            {
+                "title": "test",
+                "textContent": "is the profile section working properly?",
+                "date": "12/11/2021/11/0/53"
+            },
+            {
+                "title": "test",
+                "textContent": "bla bla bla happy to go ",
+                "date": "12/11/2021/11/7/20"
+            },
+            {
+                "title": "test",
+                "textContent": "now it must work properly",
+                "date": "12/11/2021/11/8/35"
             }
         ]
     },
@@ -60,5 +75,17 @@
         "name": "Abdusattor",
         "password": "1221",
         "posts": []
+    },
+    {
+        "id": 5,
+        "name": "Ali",
+        "password": "2003",
+        "posts": [
+            {
+                "title": "Birinchi postim",
+                "textContent": "Bu men yozgan birinchi post. Hammaga raxmat.",
+                "date": "12/11/2021/11/2/46"
+            }
+        ]
     }
 ]
